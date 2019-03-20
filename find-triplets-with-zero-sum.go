@@ -6,7 +6,6 @@ import (
 )
 
 func main () {
- 
       test1 := []int{0, -1, 2, -3, 1}
       test2 := []int{1,2,3}
       findtiplet(test1,5)
@@ -17,7 +16,6 @@ func (a myint) Len() int { return len(a) }
 func (a myint) Swap(i,j int) { a[i],a[j] = a[j],a[i] }
 func (a myint) Less(i,j int) bool { return a[i] < a [j] }
 
- 
 func findtiplet (t []int, n int ) int{
 
      sort.Sort(myint(t))
