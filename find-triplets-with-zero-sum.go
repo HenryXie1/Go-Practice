@@ -1,5 +1,3 @@
-This note is to add Go implementation of the [find-triplets-with-zero-sum](https://practice.geeksforgeeks.org/problems/find-triplets-with-zero-sum/1)
-```
 package main
 
 import (
@@ -38,4 +36,3 @@ fmt.Println("false")
 return 0
  
 }
-```
