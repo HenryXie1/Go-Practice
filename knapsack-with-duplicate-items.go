@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 )
-
 func main() {
 
           test1 := []int{4,8}
@@ -28,7 +27,6 @@ func kanpsack(n int, w int, testv []int, testw []int ) int {
   
    return res[w]    
 }
-
 func max(x ,y int) int {
   if x > y { 
    return x
