@@ -18,10 +18,8 @@ func findtiplet (t []int, n int )   {
 
      fmt.Println(t)
      found := false
-        
      for i := 0 ; i < n -1 ; i ++ {
-          s := make([]int,n)
-          for p := range s { s[p] = -9999 }  // potential bug if x is 9999
+          s := []int{}
           k :=0
           for j := i + 1; j < n  ; j++ {
                x := -(t[i]+t[j])
@@ -29,7 +27,7 @@ func findtiplet (t []int, n int )   {
               fmt.Printf("%d,%d,%d\n",x,t[i],t[j])
               found = true 
             } else {
-             s[k]=t[j]
+              s = append(s,t[j])
        //    fmt.Printf("s is %v\n",s)
              k++
               }
