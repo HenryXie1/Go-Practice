@@ -27,11 +27,24 @@ func main() {
 
 	pid := cmd.Process.Pid
 	var regs syscall.PtraceRegs
+	exit := true
 	
-	err = syscall.PtraceGetRegs(pid, &regs)
-	if err != nil {
-		panic(err)
-	}
-	fmt.Printf("%s\n", ss.GetName(regs.Orig_rax))
-
+	for {
+	if exit {
+		err = syscall.PtraceGetRegs(pid, &regs)
+		if err != nil {
+		break
+		}
+		fmt.Printf("%s\n", ss.GetName(regs.Orig_rax))
+   }
+	err = syscall.PtraceSyscall(pid,0)
+	  if err != nil {
+		  panic(err)
+	  }
+	_,err = syscall.Wait4(pid,nil,0,nil)
+	  if err != nil {
+		  panic(err)
+	  }
+	  exit = !exit
+   }
 }
