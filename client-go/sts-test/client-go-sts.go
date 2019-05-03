@@ -32,14 +32,11 @@ func main() {
         panic(err.Error())
     }
     for {
-        //pods, err := clientset.CoreV1().Pods("").List(metav1.ListOptions{})
-        sts,err := clientset.AppsV1().StatefulSets("").List(metav1.ListOptions{})
-
+        sts, err := clientset.AppsV1().StatefulSets("").List(metav1.ListOptions{})
         if err != nil {
             panic(err.Error())
         }
         fmt.Printf("There are %d statefulsets in the cluster\n", len(sts.Items))
-        fmt.Printf("Here are details: %T\n %v\n",sts.Items,sts.Items)
         time.Sleep(10 * time.Second)
     }
 }

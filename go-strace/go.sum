@@ -1,0 +1,3 @@
+github.com/lizrice/strace-from-scratch v0.0.0-20170717104457-acb2d542b63e/go.mod h1:QAJk8fOWWemOQxa4pG0vH1bxM/o6+W8waq8qT6R0z8I=
+github.com/seccomp/libseccomp-golang v0.9.0 h1:S1pmhdFh5spQtVojA+4GUdWBqvI8ydYHxrx8iR6xN8o=
+github.com/seccomp/libseccomp-golang v0.9.0/go.mod h1:GbW5+tmTXfcxTToHLXlScSlAvWlF4P2Ca7zGrPiEpWo=
