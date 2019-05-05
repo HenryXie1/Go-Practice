@@ -10,7 +10,7 @@ func main() {
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-name: my-dddddnginx
+name: testnginx
 spec:
 replicas: 2
 template:
@@ -22,7 +22,7 @@ template:
     - name: my-nginx
       image: nginx
       ports:
-      - containerPort: 80
+      - containerPort: 8080
 `
 
   var spec v1.Deployment
